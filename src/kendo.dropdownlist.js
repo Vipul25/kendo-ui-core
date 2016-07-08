@@ -872,7 +872,7 @@ var __meta__ = { // jshint ignore:line
             }
         },
 
-        _filter: function(word) {
+        _searchByWord: function(word) {
             if (word) {
                 var that = this;
                 var ignoreCase = that.options.ignoreCase;
@@ -885,6 +885,10 @@ var __meta__ = { // jshint ignore:line
                     return that._matchText(that._text(dataItem), word);
                 });
             }
+        },
+
+        _inputValue: function() {
+            return this.text();
         },
 
         _search: function() {
